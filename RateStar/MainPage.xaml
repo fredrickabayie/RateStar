@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="RateStar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RateStar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Pivot Title="RateStar" FontFamily="Harrington" FontSize="12" Foreground="#FF2BC1D8" Background="#FF2B1747">
+            <PivotItem Header="About">
+                <StackPanel>
+                    <TextBlock
+                        x:Name="about" 
+                        Margin="10,40,10,10"
+                        TextWrapping="Wrap"
+                        FontSize="30"
+                        Text="This is an app to rating the Onga food ordering app."/>
+                </StackPanel>
+            </PivotItem>
+            
+            <PivotItem Header="Question">
+                <StackPanel>
+                    
+                <TextBlock 
+                    x:Name="textBlock"
+                    HorizontalAlignment="Left"
+                    Margin="10,26,0,0"
+                    TextWrapping="Wrap" 
+                    FontSize="20"
+                    Padding="15,15,0,0"
+                    Text="Please rate the performance of the Onga application?" 
+                    VerticalAlignment="Top" 
+                    Height="73" 
+                    Width="342"/>
+
+                    <Grid Margin="20,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <RadioButton x:Name="worse" Content="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" GroupName="radioRate" BorderBrush="#FFD45151"/>
+                        <RadioButton x:Name="bad" Content="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" GroupName="radioRate" BorderBrush="#FFD45151"/>
+                        <RadioButton x:Name="ok" Content="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" GroupName="radioRate" BorderBrush="#FFD45151"/>
+                        <RadioButton x:Name="good" Content="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3" GroupName="radioRate" BorderBrush="#FFD45151"/>
+                        <RadioButton x:Name="excellent" Content="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="4" GroupName="radioRate" BorderBrush="#FFD45151"/>
+                    </Grid>
+
+                    <TextBox x:Name="commentTxt" Margin="0" TextWrapping="Wrap" PlaceholderText="Please enter your comment" VerticalAlignment="Stretch" Height="237"/>
+                    <Button x:Name="submitBtn" Content="SUBMIT" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="submitBtn_Click" Foreground="#FFFBF9F9" Background="#FF101AF7" BorderBrush="#FFD45151"/>
+
+                </StackPanel>
+            </PivotItem>
+
+            <PivotItem Header="Results">
+                <StackPanel>
+                    <Button x:Name="resultPage" Content="VIEW RESULTS" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="resultPage_Click" Background="#FF2A7851" BorderBrush="#FFD1DC64"/>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>

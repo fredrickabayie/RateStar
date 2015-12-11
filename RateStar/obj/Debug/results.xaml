@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="RateStar.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RateStar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Pivot Title="Pivot" Background="#FF134745" Foreground="#FFC30202">
+            <PivotItem Header="Ratings">
+                <StackPanel>
+                    <Button x:ConnectionId='1' x:Name="addRating" Content="Add Rating" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"                         Background="#FFB3C925" BorderBrush="#FFB4751B"/>
+
+                    <ListBox x:Name="listBox" FontFamily="Broadway" FontSize="13.333" Foreground="#FF2382E2" Background="#CCE8D3D3">
+                        <ListView x:Name="resultList"/>
+                    </ListBox>
+
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
+
